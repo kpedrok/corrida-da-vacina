@@ -1,24 +1,17 @@
 import Head from "next/head";
 import React from "react";
+import ReactGA from "react-ga";
 import styles from "../styles/Home.module.css";
 
 function Home() {
-  // function removeElementsByClass(className) {
-  //   var elements = document.getElementsByClassName(className);
-  //   if (elements?.length > 0) {
-  //     elements[0].parentNode.removeChild(elements[0]);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   removeElementsByClass("flourish-credit");
-  // });
+  const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_TRACKING_ID;
+  ReactGA.initialize(googleAnalyticsTrackingId);
 
   return (
     <div className={styles.container}>
       <div>
         <Head>
-          <title>Create Next App</title>
+          <title>A Corrida da Vacina</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
@@ -26,8 +19,12 @@ function Home() {
           <h1 className={styles.title}>
             Corrida da <span className={styles.span}>Vacina!</span>
           </h1>
+          <div className={styles.subtitle}>
+            Visualize a evolução percentual de pessoas que já tomaram a primeira
+            dose da vacina no seu estado.
+          </div>
 
-          <div className={styles.background}>Teste TEEETEE</div>
+          <div className={styles.background}></div>
 
           <div className={styles.flourishTest}>
             <iframe
