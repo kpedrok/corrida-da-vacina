@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import ReactGA from "react-ga";
 import "../styles/globals.css";
 
-ReactGA.initialize({ trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID });
 ReactGA.initialize(process.env.GOOGLE_ANALYTICS_TRACKING_ID);
-
-ReactGA.initialize({ gaTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID });
 
 const trackPage = (page) => {
   ReactGA.set({ page });
