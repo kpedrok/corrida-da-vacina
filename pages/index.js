@@ -1,12 +1,13 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import ReactGA from "react-ga";
 import styles from "../styles/Home.module.css";
 
 function Home() {
-  const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_TRACKING_ID;
-  ReactGA.initialize(googleAnalyticsTrackingId);
   useEffect(() => {
+    ReactGA.initialize({
+      trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+    });
     ReactGA.event({
       category: "User",
       action: "Page Viewed",
