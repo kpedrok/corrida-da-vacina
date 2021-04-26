@@ -6,6 +6,12 @@ import styles from "../styles/Home.module.css";
 function Home() {
   const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_TRACKING_ID;
   ReactGA.initialize(googleAnalyticsTrackingId);
+  useEffect(() => {
+    ReactGA.event({
+      category: "User",
+      action: "Page Viewed",
+    });
+  });
 
   return (
     <div className={styles.container}>
