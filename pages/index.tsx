@@ -5,9 +5,6 @@ import styles from "../styles/Home.module.css";
 
 function Home() {
   useEffect(() => {
-    ReactGA.initialize({
-      trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-    });
     ReactGA.event({
       category: "User",
       action: "Page Viewed",
