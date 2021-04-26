@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
- function Home() {
+function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -11,13 +11,11 @@ import styles from '../styles/Home.module.css';
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Corrida da <a >Vacina!</a>
+          Corrida da <a href="./test">Vacina</a>
         </h1>
-        <h2 className={styles.title}>
-          We are live!
-        </h2>
+
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -58,12 +56,12 @@ import styles from '../styles/Home.module.css';
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  )
+  );
 }
 
 export default Home;
