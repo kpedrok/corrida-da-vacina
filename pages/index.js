@@ -13,7 +13,9 @@ import styles from '../styles/Home.module.css';
         <h1 className={styles.title}>
           Corrida da <a >Vacina!</a>
         </h1>
-
+        <h2 className={styles.title}>
+          We are live!
+        </h2>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
