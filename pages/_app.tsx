@@ -1,21 +1,22 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
-import "../styles/globals.css";
+import { AppProps } from "next/app";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import * as gtag from "../utils/gtag";
 
-ReactGA.initialize(process.env.GOOGLE_ANALYTICS_TRACKING_ID);
+const App = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
 
-const trackPage = (page) => {
-  ReactGA.set({ page });
-  ReactGA.pageview(page);
-};
-
-function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    const page = location.pathname;
-    trackPage(page);
-  });
+    const handleRouteChange = (url: URL) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return <Component {...pageProps} />;
-}
+};
 
-export default MyApp;
+export default App;
