@@ -28,8 +28,7 @@ function Home() {
 
             {/* <img src={ReactLogo} /> */}
           </div>
-
-          <div>
+          <div className={styles.margin}>
             <iframe
               src="https://flo.uri.sh/visualisation/5975428/embed"
               title="Interactive or visual content"
@@ -38,12 +37,8 @@ function Home() {
               className={styles.flourishContainer}
               sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
             ></iframe>
-            <div
-              className={
-                "width: 90vw !important; margin-top: 4px !important; text-align: right !important"
-              }
-            ></div>
           </div>
+          <div>Assita com música:</div>
           <ReactAudioPlayer
             src="https://www.bensound.com/bensound-music/bensound-anewbeginning.mp3"
             autoPlay={true}
