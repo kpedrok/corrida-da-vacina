@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "next": "10.x",
+    "next-images": "^1.7.0",
     "react": "17.x",
     "react-dom": "17.x",
     "react-ga": "^3.3.0"
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@types/gtag.js": "^0.0.4",
     "@types/react": "^17.0.3",
+    "babel-plugin-inline-react-svg": "^2.0.1",
     "typescript": "^4.2.4"
   }
 }

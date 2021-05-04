@@ -16,19 +16,21 @@ function Home() {
         </Head>
 
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Corrida da <span className={styles.span}>Vacina!</span>
-          </h1>
-          <div className={styles.subtitle}>
-            Visualize a evolução percentual de pessoas que já tomaram a primeira
-            dose da vacina no seu estado.
+          <div className={styles.header}>
+            <div className={styles.text}>
+              <div className={styles.title}>Corrida da Vacina!</div>
+              <div className={styles.subtitle}>
+                Visualize a evolução percentual de pessoas que já tomaram a
+                primeira dose da vacina no seu estado.
+              </div>
+            </div>
+
+            {/* <img src={ReactLogo} /> */}
           </div>
 
-          <div className={styles.background}></div>
-
-          <div className={styles.flourishTest}>
+          <div>
             <iframe
-              src="https://flo.uri.sh/visualisation/5964566/embed"
+              src="https://flo.uri.sh/visualisation/5975428/embed"
               title="Interactive or visual content"
               frameBorder="0"
               scrolling="no"
