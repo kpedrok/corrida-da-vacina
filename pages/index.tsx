@@ -126,7 +126,7 @@ function Home() {
               sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
             ></iframe>
           </div>
-          <div>Assita com música:</div>
+          <div style={{ marginBottom: 5 }}>Tudo fica melhor com música:</div>
           <ReactAudioPlayer
             src="https://www.bensound.com/bensound-music/bensound-anewbeginning.mp3"
             autoPlay={true}
