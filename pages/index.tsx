@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
+import ReactAudioPlayer from "react-audio-player";
 import styles from "../styles/Home.module.css";
 
 function Home() {
@@ -43,6 +44,11 @@ function Home() {
               }
             ></div>
           </div>
+          <ReactAudioPlayer
+            src="https://www.bensound.com/bensound-music/bensound-anewbeginning.mp3"
+            autoPlay
+            controls
+          />
         </main>
 
         {/* <footer className={styles.footer}></footer> */}
