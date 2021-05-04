@@ -46,8 +46,12 @@ function Home() {
           </div>
           <ReactAudioPlayer
             src="https://www.bensound.com/bensound-music/bensound-anewbeginning.mp3"
-            autoPlay
+            autoPlay={true}
             controls
+            onCanPlay={(event) => console.log(1, event)}
+            onCanPlayThrough={(event) => console.log(2, event)}
+            onError={(event) => console.log(3, event)}
+            onAbort={(event) => console.log(4, event)}
           />
         </main>
 
