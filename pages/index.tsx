@@ -1,18 +1,30 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 import ReactAudioPlayer from "react-audio-player";
+import ReactGA from "react-ga";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import styles from "../styles/Home.module.css";
+
+function converted(email?: string) {
+  ReactGA.event({
+    category: "User",
+    action: "Created an Account",
+  });
+  ReactGA.set({ email });
+}
+
 const CustomForm = ({ status, message, onValidated }) => {
   let email, name;
-  const submit = () =>
+  const submit = () => {
     email &&
-    name &&
-    email.value.indexOf("@") > -1 &&
-    onValidated({
-      EMAIL: email.value,
-      LNAME: name.value,
-    });
+      name &&
+      email.value.indexOf("@") > -1 &&
+      onValidated({
+        EMAIL: email.value,
+        LNAME: name.value,
+      });
+    converted(email.value);
+  };
 
   return (
     <div
