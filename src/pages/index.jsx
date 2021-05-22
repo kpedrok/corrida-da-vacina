@@ -48,17 +48,17 @@ export default function Home(props) {
 }
 
 // Tell NextJS to generate as static HTML
-// export async function getStaticProps() {
-//   const response = await fetch("http://localhost:3333/cases-brazil-total");
-//   const data = await response.json();
+export async function getStaticProps() {
+  // const response = await fetch("http://localhost:3333/cases-brazil-total");
+  // const data = await response.json();
 
-//   const brazilData = data.filter((d) => d.state === "TOTAL");
-//   // do something...
+  // const brazilData = data.filter((d) => d.state === "TOTAL");
+  // do something...
 
-//   return {
-//     props: {
-//       brazil: brazilData[0],
-//     },
-//     revalidate: 60 * 60 * 1, // update infos every 1 hour
-//   };
-// }
+  return {
+    props: {
+      // brazil: brazilData[0],
+    },
+    revalidate: 60 * 60 * 1, // update infos every 1 hour
+  };
+}
