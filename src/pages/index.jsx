@@ -8,7 +8,7 @@ export default function Home(props) {
   }, []);
 
   return (
-    <div className={styles.main}>
+    <div className={styles.container}>
       <HeaderCard />
       {/* <p>Testes: {JSON.stringify(props.brazil)}</p> */}
       {/* <p>
@@ -35,6 +35,7 @@ export default function Home(props) {
       </p> */}
       <div className={styles.margin}>
         <iframe
+          loading="lazy"
           src="https://flo.uri.sh/visualisation/5975428/embed"
           title="Interactive or visual content"
           frameBorder="0"
