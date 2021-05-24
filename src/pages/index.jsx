@@ -1,11 +1,21 @@
 import { useEffect } from "react";
 import { HeaderCard } from "../components/HeaderCard";
 import styles from "../styles/Home.module.scss";
+import * as gtag from "../utils/gtag";
 
 export default function Home(props) {
   useEffect(() => {
     console.log("Something changed");
   }, []);
+
+  function emailMe() {
+    gtag.event({
+      action: "email_opened",
+      category: "test_category",
+      label: "test_label",
+      value: "test_value",
+    });
+  }
 
   return (
     <div className={styles.container}>
@@ -43,6 +53,31 @@ export default function Home(props) {
           className={styles.flourishContainer}
           sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
         ></iframe>
+      </div>
+
+      <div>
+        <button
+          onClick={emailMe}
+          style={{
+            background: "white",
+            border: "2px solid white",
+            boxShadow: "0px 8px 16px rgb(0 0 0 / 16%)",
+            borderRadius: "20px",
+          }}
+        >
+          <a
+            style={{
+              color: "#FB4B6F",
+              fontWeight: 800,
+              textDecoration: "none",
+            }}
+            target="_blank"
+            href="mailto: corridadavacina@gmail.com"
+          >
+            {" "}
+            Fale conosco
+          </a>
+        </button>
       </div>
     </div>
   );
