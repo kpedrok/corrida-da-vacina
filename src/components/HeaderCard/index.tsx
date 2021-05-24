@@ -4,7 +4,9 @@ export function HeaderCard() {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.textWrapper}>
-        <h1>CORRIDA DA VACINA</h1>
+        <h1>
+          Corrida <br /> da Vacina
+        </h1>
         <p>
           Visualize a evolução percentual de pessoas que já tomaram a primeira
           dose da vacina no seu estado.

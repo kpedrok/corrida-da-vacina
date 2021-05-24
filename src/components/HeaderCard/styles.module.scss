@@ -11,25 +11,26 @@
 
   h1 {
     color: var(--pink);
-    font-weight: 800;
-    width: 60%;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 0.9;
   }
 
   .textWrapper{
     display: flex;
     flex-direction: column;
-    width: 60%
+    width: 40%
   }
 }
 
 .imgWoman{
   width: 80%;
-
+  margin-left: auto;
 }
 
 .imgSplash{
   position: relative;
-  left: -165px;
+  left: -106px;
   top: -26px;
 }
 
@@ -59,7 +60,7 @@
   }
 
   .imgWoman{
-    width: 80%;
+    width: 70%;
     order: 1;
   }
 }
