@@ -1,16 +1,10 @@
 import { useEffect } from "react";
-import ReactGA from "react-ga";
 import { HeaderCard } from "../components/HeaderCard";
 import styles from "../styles/Home.module.scss";
 
 export default function Home(props) {
   useEffect(() => {
     console.log("Something changed");
-  }, []);
-  useEffect(() => {
-    ReactGA.initialize("G-XBJFETXKRK");
-    console.log("GA initialized");
-    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (
