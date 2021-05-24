@@ -10,7 +10,7 @@ export default function Home(props) {
 
   function emailMe() {
     gtag.event({
-      action: "email_opened",
+      action: "test_action",
       category: "test_category",
       label: "test_label",
       value: "test_value",
