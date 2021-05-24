@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import ReactGa from "react-ga";
+import ReactGA from "react-ga";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    ReactGa.initialize("G-XBJFETXKRK");
+    ReactGA.initialize("G-XBJFETXKRK");
     console.log("GA initialized");
-    ReactGa.pageview("/");
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return <Component {...pageProps} />;
