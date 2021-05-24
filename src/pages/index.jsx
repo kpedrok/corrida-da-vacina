@@ -48,6 +48,7 @@ export default function Home(props) {
           loading="lazy"
           src="https://flo.uri.sh/visualisation/5975428/embed"
           title="Interactive or visual content"
+          height="600px"
           frameBorder="0"
           scrolling="no"
           className={styles.flourishContainer}
@@ -74,8 +75,7 @@ export default function Home(props) {
             target="_blank"
             href="mailto: corridadavacina@gmail.com"
           >
-            {" "}
-            Fale conosco
+            Participe!
           </a>
         </button>
       </div>
