@@ -5,9 +5,10 @@ import "../styles/globals.scss";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     ReactGa.initialize("G-XBJFETXKRK");
+    console.log("GA initialized");
+    ReactGa.pageview("/");
   }, []);
 
-  ReactGa.pageview("/");
   return <Component {...pageProps} />;
 }
 
