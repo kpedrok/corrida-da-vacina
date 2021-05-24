@@ -73,7 +73,7 @@ export default function Home(props) {
               textDecoration: "none",
             }}
             target="_blank"
-            href="mailto: corridadavacina@gmail.com"
+            href="mailto: corridadavacina@gmail.com?subject=Gostaria de fazer parte do projeto!"
           >
             Participe!
           </a>
